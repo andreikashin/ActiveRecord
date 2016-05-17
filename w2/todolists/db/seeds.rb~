@@ -20,15 +20,15 @@ User.create! [
 Profile.create! [
   { gender: "female",	birth_year: 1954,	first_name: "Carly", last_name: "Fiorina", user_id: 1 },
   { gender: "male",	birth_year: 1946,	first_name: "Donald",	last_name: "Trump", user_id: 2},
-  { gender: "male",	birth_year: 1951,	first_name: "Ben",	last_name: "Carson", user_id: 3},
+  { gender: "male",	birth_year: 1951,	first_name: "Sue",	last_name: "Carson", user_id: 3},
   { gender: "female",	birth_year: 1947,	first_name: "Hillary",	last_name: "Clinton", user_id: 4},
 ]
 
 TodoList.create! [
-  {id: 1, list_name: "Alist", list_due_date: Date.today+1.year},
-  {id: 2, list_name: "Blist", list_due_date: Date.today+1.year},
-  {id: 3, list_name: "Clist", list_due_date: Date.today+1.year},
-  {id: 4, list_name: "Dlist", list_due_date: Date.today+1.year},
+  {id: 1, list_name: "Alist", list_due_date: Date.today+1.year, user_id: 1},
+  {id: 2, list_name: "Blist", list_due_date: Date.today+1.year, user_id: 2},
+  {id: 3, list_name: "Clist", list_due_date: Date.today+1.year, user_id: 3},
+  {id: 4, list_name: "Dlist", list_due_date: Date.today+1.year, user_id: 4},
 ]
 
 TodoItem.create! [
