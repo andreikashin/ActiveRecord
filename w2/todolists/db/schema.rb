@@ -45,14 +45,6 @@ ActiveRecord::Schema.define(version: 20160516230610) do
     t.integer  "user_id"
   end
 
-  create_table "todolists_users", force: :cascade do |t|
-    t.integer "todolist_id"
-    t.integer "user_id"
-  end
-
-  add_index "todolists_users", ["todolist_id"], name: "index_todolists_users_on_todolist_id"
-  add_index "todolists_users", ["user_id"], name: "index_todolists_users_on_user_id"
-
   create_table "users", force: :cascade do |t|
     t.string   "username"
     t.string   "password_digest"
