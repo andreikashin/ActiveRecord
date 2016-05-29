@@ -20,7 +20,7 @@ User.create! [
 Profile.create! [
   { gender: "female",	birth_year: 1954,	first_name: "Carly", last_name: "Fiorina", user_id: 1 },
   { gender: "male",	birth_year: 1946,	first_name: "Donald",	last_name: "Trump", user_id: 2},
-  { gender: "male",	birth_year: 1951,	first_name: "Sue",	last_name: "Carson", user_id: 3},
+  { gender: "male",	birth_year: 1951,	first_name: "Ben",	last_name: "Carson", user_id: 3},
   { gender: "female",	birth_year: 1947,	first_name: "Hillary",	last_name: "Clinton", user_id: 4},
 ]
 
