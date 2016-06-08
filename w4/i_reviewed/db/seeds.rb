@@ -17,6 +17,8 @@ Book.create! [
   { name: "The ruby prog lang", author: "E" }
 ]
 
+100.times { |index| Book.create! name: "Book#{index}", author: "Author#{index}"}
+
 eloquent = Book.find_by name: "Eloquent Ruby"
 eloquent.notes.create! [
   { title: "wow", note: "Great book WOW" },

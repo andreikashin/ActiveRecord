@@ -7,6 +7,7 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
 Book.destroy_all
+Reviewer.destroy_all
 
 Book.create! [
   { name: "Eloquent Ruby", author: "A" },
@@ -26,3 +27,8 @@ reviewers = Reviewer.create! [
   { name: "Joe", password: "abc123" },
   { name: "Jim", password: "123abc" }
 ]
+
+Book.all.each do |book|
+  book.reviewer = reviewers.sample
+  book.save!
+end
