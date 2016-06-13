@@ -22,7 +22,7 @@ class TodoItemsController < ApplicationController
     @todo_item = @todo_list.todo_items.new(todo_item_params)
 
     respond_to do |format|
-      if @todo_list.save
+      if @todo_list.save && @todo_item.save
         format.html { redirect_to @todo_list, notice: 'Todo item was successfully created.' }
         format.json { render :show, status: :created, location: @todo_item }
       else
@@ -51,7 +51,7 @@ class TodoItemsController < ApplicationController
   def destroy
     @todo_item.destroy
     respond_to do |format|
-      format.html { redirect_to todo_items_url, notice: 'Todo item was successfully destroyed.' }
+      format.html { redirect_to @todo_list, notice: 'Todo item was successfully destroyed.' }
       format.json { head :no_content }
     end
   end
