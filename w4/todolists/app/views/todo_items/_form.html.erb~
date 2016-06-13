@@ -25,7 +25,7 @@
   </div>
   <div class="field">
     <%= f.label :completed %><br>
-    <%= f.check_box :completed, :disabled => !@todo_item.persisted? %>
+    <%= f.check_box :completed, :disabled => @todo_item.persisted? %>
   </div>
   <div class="actions">
     <%= f.submit %>
